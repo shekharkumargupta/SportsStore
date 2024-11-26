@@ -21,11 +21,10 @@ export class AuthComponent{
             this.auth.authenticate(this.username ?? "", this.password ?? "")
             .subscribe(response => {
                 if(response){
-                    this.router.navigateByUrl("/admin/admin")
+                    this.router.navigateByUrl("/admin/main")
                 }
                 this.errorMessage = "Authentication Failed";
             })
-            this.router.navigateByUrl("/admin/admin");
         }else{
             this.errorMessage = "Invalid form data!";
         }
